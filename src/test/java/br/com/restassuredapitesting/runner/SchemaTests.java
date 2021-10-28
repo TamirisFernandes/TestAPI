@@ -1,9 +1,6 @@
 package br.com.restassuredapitesting.runner;
 
-import br.com.restassuredapitesting.suites.AcceptanceTests;
 import br.com.restassuredapitesting.tests.auth.tests.PostAuthTest;
-import br.com.restassuredapitesting.tests.booking.tests.AcceptanceTest;
-import br.com.restassuredapitesting.tests.booking.tests.DeleteBookingTest;
 import br.com.restassuredapitesting.tests.booking.tests.GetBookingTest;
 import br.com.restassuredapitesting.tests.booking.tests.PutBookingTest;
 import br.com.restassuredapitesting.tests.ping.tests.GetPingTest;
@@ -12,16 +9,13 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
 @RunWith(Categories.class)
-@Categories.IncludeCategory(br.com.restassuredapitesting.suites.AllTestes.class)
+@Categories.IncludeCategory(br.com.restassuredapitesting.suites.SchemaTests.class)
 @Suite.SuiteClasses({
-        GetPingTest.class,
-        GetBookingTest.class,
-        PostAuthTest.class,
-        PutBookingTest.class,
-        DeleteBookingTest.class,
-        AcceptanceTest.class,
+    //Garantir o schema do retorno da lista de reservas
+        //Garantir o schema do retorno de uma reserva específica
+        GetBookingTest.class
+
+
 })
-
-
-public class AllTestes {
+public class SchemaTests {
 }

@@ -1,0 +1,13 @@
+Apontamentos sobre o desafio:
+
+•	/GET
+o	Listar IDs de reservas utilizando o filtro checkout and checkout
+        Não é possível repetir o filtro, retornando o erro 500.
+
+•	/POST
+o	Criar uma reserva enviando mais parâmetros no payload da reserva
+        Foi possível passar mais parâmetros, porém este parâmetro foi ignorado no cadastro gerado pois não fazia parte do schema.
+
+o	Validar retorno 418 quando o header Accept for invalido
+        Não foi possível obter o retorno 418, pois header inválido retorna 400.
+
